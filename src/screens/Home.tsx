@@ -7,14 +7,14 @@ import { RootStackParamList } from '../../App'
 
 type HomeProps = StackScreenProps<RootStackParamList,"Home"> // HomeProps
 
-const Home = ({navigation}:HomeProps) => {
+const Home = ({navigation} :HomeProps) => {
 
   return (
     <View style={styles.container}>
       <Text>Home</Text>
       <Button
         title='Go to detail screen'
-        onPress={()=>navigation.navigate('Details',{porductId:"10"})}
+        onPress={()=>navigation.navigate('Details', {porductId:"10"})}
         //onPress={()=>navigation.push('Details',{porductId:"10"})}
         //onPress={()=>navigation.replace("Details",{porductId:"10"})} here we 
       />

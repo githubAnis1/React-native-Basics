@@ -1,17 +1,13 @@
-import { StyleSheet, Text, View, TouchableOpacity, FlatList, Pressable } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { matrix } from './currency/constants'
-//import { Calculate } from '@mui/icons-material'
-//import { Item } from 'react-native-paper/lib/typescript/components/Drawer/Drawer'
 import { Popup } from 'react-native-popup-confirm-toast'
-//import { Button } from 'react-native-paper'
-//import Icons from '../components/Icons'
+
 
 
 const TicTacToe = () => {
 
-    const [current, setCurrent] = useState("X")
-    //const [cell, setCell] = useState <cell> (null)
+    const [current, setCurrentPlayer] = useState("X")
     const [newMatrix, setNewMatrix] = useState<cell[]>(matrix)
 
     const clickOnCell = (targetCell: cell) => {
@@ -30,7 +26,7 @@ const TicTacToe = () => {
                 : cell
               ))
         // Toggle current player
-        setCurrent((prev) => (prev === 'X' ? 'O' : 'X'));
+        setCurrentPlayer((prev) => (prev === 'X' ? 'O' : 'X'));
     };
 
     const checkForWin = (matrix: cell[]): boolean => {

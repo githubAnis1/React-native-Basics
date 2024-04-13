@@ -14,7 +14,7 @@ import { useNavigation } from '@react-navigation/native'
 
 type DetailsProps = StackScreenProps<RootStackParamList,"Details"> // DetailsProps
 
-const Details = ({route}:DetailsProps) => {
+const Details = ({route} :DetailsProps) => {
     const { porductId } = route.params
 
     const navigate = useNavigation<StackNavigationProp<RootStackParamList>>()
@@ -28,7 +28,6 @@ const Details = ({route}:DetailsProps) => {
         //onPress={()=>navigate.goBack()}
         //onPress={()=>navigate.pop(1)}
         //onPress={()=>navigate.popToTop()}
-        
       />
     </View>
   )

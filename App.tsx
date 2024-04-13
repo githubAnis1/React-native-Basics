@@ -18,6 +18,11 @@ import 'react-native-gesture-handler';
 
 //Screens
 import { Details, Home } from './src/screens';
+import ChangeBG from './components/ChangeBG';
+import FancyCard from './components/FancyCard';
+import PasswordGenerator from './components/PasswordGenerator';
+import Currency from './src/currency';
+import TicTacToe from './src/TicTacToe';
 
 
 
@@ -66,18 +71,19 @@ export default function App(){
           }}
         />
         {/* <PopupRootProvider>
-            <SafeAreaView style={{backgroundColor: backGound}}>
-                <ChangeBG changeBg={changeBg}/>
-                <ScrollView horizontal>
-                {// creating an array with four undefined elements and then using map to replace each undefined element with a FancyCard component.
-                [...Array(3)].map((_, index) => <FancyCard key={index}/>)}
-                </ScrollView>
-                <PasswordGenerator/> 
-                <Currency/> 
-                <TicTacToe/>
-               
-            </SafeAreaView>
-          </PopupRootProvider> */}
+          <SafeAreaView style={{backgroundColor: backGound}}>
+
+              <ChangeBG changeBg={changeBg}/>
+              <ScrollView horizontal>
+              {// creating an array with four undefined elements and then using map to replace each undefined element with a FancyCard component.
+              [...Array(3)].map((_, index) => <FancyCard key={index}/>)}
+              </ScrollView>
+              <PasswordGenerator/> 
+              <Currency/> 
+              <TicTacToe/>
+
+          </SafeAreaView>
+        </PopupRootProvider> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

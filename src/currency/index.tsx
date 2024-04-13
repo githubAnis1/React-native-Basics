@@ -16,8 +16,8 @@ const Currency = () :JSX.Element => {
   const [resultValue, setResultValue] = useState('')
   const [targetCurrency, setTargetCurrency] = useState('')
 
-  const buttonPressed = (targetValue:currency) => {
-    if(!inputValue){
+  const buttonPressed = (targetValue :currency) => {
+    if(!inputValue) {
        Popup.show({
         type: 'info',
         title: 'oops !',

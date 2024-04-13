@@ -9,5 +9,5 @@ interface currency {
 interface cell {
     id: number;
     value: string;
-    isClicked:boolean;
+    isClicked: boolean;
 }
