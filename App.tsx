@@ -13,7 +13,7 @@ import { PaperProvider } from 'react-native-paper';
 
 //Navigation
 import { NavigationContainer } from '@react-navigation/native';//wrapper
-import { createStackNavigator } from '@react-navigation/stack';//navigation type i choose
+import { createStackNavigator } from '@react-navigation/stack';//navigation type
 import 'react-native-gesture-handler';
 
 //Screens
@@ -42,11 +42,12 @@ export default function App(){
 
   // const isDarkMode = useColorScheme() === "dark"
   const [backGound, setBackGound] = useState("#dddddd")
+
   const changeBg = () => {
     let hexCode="0123456789abdcef"
     let hexBg =''
-    for (let i = 0; i < 6; i++) {// take 6 digits
-      hexBg += hexCode.charAt(Math.round(Math.random() * 16))// must be in range of hexadecimal
+    for (let i = 0; i < 6; i++) {// fill 6 digits
+      hexBg += hexCode.charAt(Math.round(Math.random() * 16))// must be in range of hexadecimal digits
     }
     setBackGound(`#${hexBg}`)
     // Trigger haptic feedback

@@ -16,16 +16,15 @@ const Currency = () :JSX.Element => {
   const [resultValue, setResultValue] = useState('')
   const [targetCurrency, setTargetCurrency] = useState('')
 
-  const buttonPressed = (targetValue :currency) => {
+  const convert = (targetValue :currency) => {
     if(!inputValue) {
        Popup.show({
         type: 'info',
         title: 'oops !',
-        textBody: 'Enter a value to convert',
+        textBody: 'Enter a value tocconvert',
         buttonText: 'OK',
         callback: () => Popup.hide()
       })
-      console.log('Enter a value to convert');
       return;
     }
     const inputAmount = parseFloat(inputValue)
@@ -80,7 +79,7 @@ const Currency = () :JSX.Element => {
                     styles.button,
                     targetCurrency === item.name && styles.selected
                   ]}
-                  onPress={()=>buttonPressed(item)}
+                  onPress={()=>convert(item)}
                 >
                   <CurrencyBtn {...item}/>
                 </Pressable>

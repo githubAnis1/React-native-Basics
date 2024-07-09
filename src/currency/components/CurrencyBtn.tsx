@@ -4,8 +4,8 @@ import type { PropsWithChildren } from 'react'
  
 
 type CurrencyBtnProps = PropsWithChildren<{
-    name:string;
-    flag:string;
+    name: string;
+    flag: string;
 }>
 
 const CurrencyBtn = ({ name, flag }: CurrencyBtnProps): JSX.Element => {

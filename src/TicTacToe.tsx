@@ -118,9 +118,6 @@ const TicTacToe = () => {
                         <View style={styles.cell}>
                             <Text>
                                 {item.value}
-                                {/* item.value && (
-                                    <Icons name='circle'/>
-                                ) */}
                             </Text>
                         </View>
                     </TouchableOpacity>

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, TextInput, Keyboard } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import * as Yup from 'yup'
 import { Formik } from 'formik';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
@@ -74,11 +74,10 @@ const PasswordGenerator = () => {
     <View style={styles.formContainer}>
       <Text style={styles.title}>Password Generator</Text>
     <Formik
-      initialValues={{ passWordlength:''}}// 1
-      validationSchema={PassWordSchema}// 2
+      initialValues = {{ passWordlength:''}} // 1
+      validationSchema = { PassWordSchema } // 2
       onSubmit = {
-       (values) => {
-         generatePasswordString(+values.passWordlength)}
+        (values) => generatePasswordString(+values.passWordlength)
       }
     >
        {({
@@ -147,7 +146,7 @@ const PasswordGenerator = () => {
           <View style={styles.formActions}>
             <TouchableOpacity
               disabled={!isValid}
-              onPress={()=>handleSubmit()}
+              onPress={() => handleSubmit()}
               style={styles.primaryBtn}
             >
               <Text style={styles.primaryBtnTxt}>Generate password</Text>
@@ -168,13 +167,13 @@ const PasswordGenerator = () => {
        )}
     </Formik>
     </View>
-    {isPasswordGenerated ? (
-          <View style={[styles.card, styles.cardElevated]}>
-            <Text style={styles.subTitle}>Result:</Text>
-            <Text style={styles.description}>Long Press to copy</Text>
-            <Text selectable style={styles.generatedPassword}>{password}</Text>
-          </View>
-        ) : null}
+    {isPasswordGenerated 
+    ? ( <View style={[styles.card, styles.cardElevated]}>
+         <Text style={styles.subTitle}>Result:</Text>
+         <Text style={styles.description}>Long Press to copy</Text>
+         <Text selectable style={styles.generatedPassword}>{password}</Text>
+        </View>) 
+    : null}
   </SafeAreaView>
   )
 }
@@ -182,9 +181,7 @@ const PasswordGenerator = () => {
 export default PasswordGenerator
 
 const styles = StyleSheet.create({
-  appContainer: {
-    flex: 1,
-  },
+  
   formContainer: {
     margin: 8,
     padding: 8,
